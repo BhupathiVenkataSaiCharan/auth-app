@@ -1,6 +1,6 @@
 import React from 'react';
 // import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Signin from '../src/basic login/Signin';
 import Profile from '../src/basic login/Profile';
 
@@ -18,7 +18,9 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
             {/* <Profile /> */}
           {/* </Route> */}
-          <Route path="/" element={<Signin/>}/>
+          <Route path="/signin" element={<Signin/>}/>
+          <Route path="*" element={<Navigate replace to="/"/>}/>
+            <Route path="/" element={<Navigate replace to="/signin"/>}/>
             {/* <Profile /> */}
           {/* </Route> */}
         </Routes>
