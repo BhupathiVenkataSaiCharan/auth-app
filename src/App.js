@@ -14,8 +14,8 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Routes>
-          <Route path="/profile" element={<Profile/>}/>
-          <Route path="/signin" element={<Signin/>}/>
+          <Route exact path="/profile" element={<Profile/>}/>
+          <Route exact path="/signin" element={<Signin/>}/>
           <Route path="*" element={<Navigate replace to="/"/>}/>
           <Route path="/" element={<Navigate replace to="/signin"/>}/>
         </Routes>
